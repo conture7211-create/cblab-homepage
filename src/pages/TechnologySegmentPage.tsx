@@ -105,17 +105,17 @@ export default function TechnologySegmentPage() {
         {data.intro}
       </p>
       <div className="flex flex-col gap-14">
-        {data.blocks.map((b) => (
-          <section key={b.title}>
-            <h2 className="mb-4 border-b border-[#dddddd] pb-3 font-serif text-[20px] tracking-[0.02em] md:text-[22px]">
-              {b.title}
-            </h2>
-            <p className="font-sans text-[15px] font-light leading-[1.85] text-[#555555] break-keep md:text-[16px]">
-              {b.body}
-            </p>
-          </section>
-        ))}
-      </div>
+  {data.blocks.map((b) => (
+    <section key={b.title}>
+      <h2 className="mb-4 border-b border-[#dddddd] pb-3 font-serif">
+        {b.title}
+      </h2>
+      <p className="font-sans text-[15px] font-light leading-[1.85]">
+        {b.body}
+      </p>
+    </section>
+  ))}
+</div>
     </main>
   );
 }
