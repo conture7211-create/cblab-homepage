@@ -54,11 +54,7 @@ const EducationSection = () => {
                 </div>
             </div>
 
-<<<<<<< HEAD
-            <section id="education-system" className="section education-section bg-[#fcfbf9] text-[#111111]">
-=======
             <section id="education" className="section education-section bg-[#fcfbf9] text-[#111111]">
->>>>>>> 25d8a9cb2c91a56dfbc60efcee5a26d96b0c3ad7
                 <div className="mx-auto max-w-[1560px] px-6 md:px-12 lg:px-20">
                     <div className="flex flex-col lg:flex-row lg:justify-between items-stretch gap-16 lg:gap-0">
                         <motion.div
@@ -75,18 +71,9 @@ const EducationSection = () => {
                                     실전 교육, 홈 트레이닝, 시스템 교육까지{'\n'}하나의 구조로 연결된 교육 플랫폼입니다.
                                 </p>
                             </div>
-<<<<<<< HEAD
-                            <Link
-                                to="/education/professional-training"
-                                className="overview-cta !normal-case"
-                            >
-                                교육 프로그램 보기 <span aria-hidden="true" className="font-light">→</span>
-                            </Link>
-=======
                             <a href="#education" className="overview-cta">
                                 View Education <span aria-hidden="true" className="font-light">→</span>
                             </a>
->>>>>>> 25d8a9cb2c91a56dfbc60efcee5a26d96b0c3ad7
                         </motion.div>
 
                         <motion.div

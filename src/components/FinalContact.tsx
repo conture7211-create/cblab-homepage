@@ -1,27 +1,7 @@
-<<<<<<< HEAD
-import { useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { ArrowUpRight } from 'lucide-react';
-
-const ctaPrimary =
-  'inline-flex min-h-[58px] items-center justify-center border border-[#d8c1a0]/90 bg-[#d8c1a0] px-10 py-4 text-[16px] font-semibold tracking-[0.08em] text-[#111111] transition hover:bg-[#e5d4bc] hover:border-[#e5d4bc]';
-
-const FinalContact = () => {
-  useEffect(() => {
-    if (window.location.hash !== '#kakao-inquiry') return;
-    const el = document.getElementById('kakao-inquiry');
-    if (!el) return;
-    requestAnimationFrame(() => {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  }, []);
-
-=======
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 
 const FinalContact = () => {
->>>>>>> 25d8a9cb2c91a56dfbc60efcee5a26d96b0c3ad7
   return (
     <section id="contact" className="py-32 lg:py-48 bg-deep-black text-elegant-white relative border-t border-white/5">
       
@@ -42,39 +22,9 @@ const FinalContact = () => {
             <p className="font-serif text-[26px] md:text-[34px] text-elegant-white leading-[1.25] tracking-[0.01em] mb-10">
               Let&rsquo;s Build the Next Beauty Standard Together
             </p>
-<<<<<<< HEAD
-            <p className="font-sans text-[16px] md:text-[18px] text-soft-stone/95 font-light leading-[1.75] break-keep max-w-[36rem] mb-10 whitespace-pre-line">
-              브랜드 협업, 교육 제휴, 제품 및 디바이스 파트너십,{'\n'}글로벌 확장 및 비즈니스 문의
-            </p>
-
-            <div
-              id="kakao-inquiry"
-              className="mb-10 max-w-[36rem] scroll-mt-[120px] md:scroll-mt-[140px] lg:scroll-mt-[156px]"
-            >
-              <p className="font-sans text-[15px] md:text-[16px] text-soft-stone/95 font-light leading-[1.75] break-keep mb-2">
-                빠른 상담은 카카오톡으로 문의해주세요
-              </p>
-              <p className="font-sans text-[13px] md:text-[14px] text-soft-stone/70 font-light leading-[1.6] break-keep mb-5">
-                디바라인 카카오톡 채널 · 가벼운 상담
-              </p>
-              <a
-                href="https://pf.kakao.com/_bPFyxj"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={ctaPrimary}
-              >
-                KakaoTalk 상담하기
-              </a>
-            </div>
-
-            <p className="font-sans text-[13px] md:text-[14px] text-soft-stone/75 font-light leading-[1.6] break-keep max-w-[36rem] mb-4">
-              제휴·비즈니스 등 주요 문의는 이메일로 부탁드립니다
-            </p>
-=======
             <p className="font-sans text-[16px] md:text-[18px] text-soft-stone/95 font-light leading-[1.75] break-keep max-w-[36rem] mb-12 whitespace-pre-line">
               브랜드 협업, 교육 제휴, 제품 및 디바이스 파트너십,{'\n'}글로벌 확장 및 비즈니스 문의
             </p>
->>>>>>> 25d8a9cb2c91a56dfbc60efcee5a26d96b0c3ad7
             <a
               href="mailto:info@cnb-lab.com"
               className="inline-flex min-h-[48px] items-center justify-center border border-white/40 bg-white/[0.06] px-8 py-3 text-[12px] font-semibold tracking-[0.14em] text-elegant-white backdrop-blur-[2px] transition hover:border-[#d8c1a0]/55 hover:bg-white/10 md:text-[13px]"

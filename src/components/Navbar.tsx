@@ -98,11 +98,7 @@ const navItems: NavItem[] = [
   },
   {
     label: 'BRANDS',
-<<<<<<< HEAD
-    href: '/#product-ecosystem',
-=======
     href: '/#brands',
->>>>>>> 25d8a9cb2c91a56dfbc60efcee5a26d96b0c3ad7
     overviewTitle: 'OVERVIEW',
     headline: '각기 다른 역할로\n연결된 브랜드 포트폴리오',
     body: '각 브랜드는 서로 다른 역할로\n하나의 플랫폼 안에서 연결됩니다.',
@@ -175,11 +171,7 @@ const navItems: NavItem[] = [
   },
   {
     label: 'EDUCATION',
-<<<<<<< HEAD
-    href: '/#education-system',
-=======
     href: '/#education',
->>>>>>> 25d8a9cb2c91a56dfbc60efcee5a26d96b0c3ad7
     overviewTitle: 'OVERVIEW',
     headline: '전문가 역량을\n시스템으로 전달합니다',
     body: '입문부터 전문가까지\n이어지는 교육 구조',
@@ -352,31 +344,11 @@ const Navbar = () => {
                   const navLinkClass = `whitespace-nowrap font-serif text-[14px] lg:text-[15px] xl:text-[16px] font-semibold tracking-[0.06em] transition-colors duration-300 h-full flex items-center ${
                     hoveredIndex === idx ? 'text-[#d8c1a0]' : 'text-white hover:text-[#d8c1a0]'
                   }`;
-<<<<<<< HEAD
-                  if (item.label === 'BUSINESS') {
-                    return (
-                      <a
-                        key={item.label}
-                        href="/#business"
-                        onMouseEnter={() => setHoveredIndex(idx)}
-                        onClick={() => setHoveredIndex(null)}
-                        className={navLinkClass}
-                      >
-                        BUSINESS
-                      </a>
-                    );
-                  }
-=======
->>>>>>> 25d8a9cb2c91a56dfbc60efcee5a26d96b0c3ad7
                   if (item.label === 'EDUCATION') {
                     return (
                       <a
                         key={item.label}
-<<<<<<< HEAD
-                        href="/#education-system"
-=======
                         href="/#education"
->>>>>>> 25d8a9cb2c91a56dfbc60efcee5a26d96b0c3ad7
                         onMouseEnter={() => setHoveredIndex(idx)}
                         onClick={() => setHoveredIndex(null)}
                         className={navLinkClass}
@@ -439,25 +411,6 @@ const Navbar = () => {
                       </p>
                     </div>
                     
-<<<<<<< HEAD
-                    {activeMenu.href.startsWith('/#') ? (
-                      <a
-                        href={activeMenu.href}
-                        onClick={() => setHoveredIndex(null)}
-                        className="overview-cta w-fit"
-                      >
-                        {activeMenu.linkText} <span aria-hidden="true" className="font-light">→</span>
-                      </a>
-                    ) : (
-                      <Link
-                        to={activeMenu.href}
-                        onClick={() => setHoveredIndex(null)}
-                        className="overview-cta w-fit"
-                      >
-                        {activeMenu.linkText} <span aria-hidden="true" className="font-light">→</span>
-                      </Link>
-                    )}
-=======
                     <Link 
                       to={activeMenu.href} 
                       onClick={() => setHoveredIndex(null)}
@@ -465,7 +418,6 @@ const Navbar = () => {
                     >
                       {activeMenu.linkText} <span aria-hidden="true" className="font-light">→</span>
                     </Link>
->>>>>>> 25d8a9cb2c91a56dfbc60efcee5a26d96b0c3ad7
                   </div>
 
                   {/* Right: 3 Columns — flex로 분리해 그리드/오버플로우로 인한 동일 콘텐츠 착시 방지 */}

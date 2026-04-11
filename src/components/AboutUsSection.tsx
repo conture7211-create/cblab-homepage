@@ -120,31 +120,12 @@ const AboutUsSection = () => {
                                 </p>
                             </div>
 
-<<<<<<< HEAD
-                            <div className="mt-8 flex flex-col gap-6 lg:mt-10">
-                                <Link
-                                    to="/about/our-story"
-                                    className="overview-cta"
-                                >
-                                    View Overview <span aria-hidden="true" className="font-light">→</span>
-                                </Link>
-                                <a
-                                    href="https://cnb-lab.com"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="section-external-cta"
-                                >
-                                    C&amp;B LAB 더 알아보기 <span aria-hidden="true" className="font-light">→</span>
-                                </a>
-                            </div>
-=======
                             <Link
                                 to="/about/our-story"
                                 className="overview-cta mt-8 lg:mt-10"
                             >
                                 View Overview <span aria-hidden="true" className="font-light">→</span>
                             </Link>
->>>>>>> 25d8a9cb2c91a56dfbc60efcee5a26d96b0c3ad7
                         </motion.div>
 
                         <motion.div

@@ -2,11 +2,7 @@ import { motion } from 'framer-motion';
 
 const GlobalSection = () => {
     return (
-<<<<<<< HEAD
-        <section id="global-expansion" className="relative bg-[#fcfbf9] overflow-hidden">
-=======
         <section id="global" className="relative bg-[#fcfbf9] overflow-hidden">
->>>>>>> 25d8a9cb2c91a56dfbc60efcee5a26d96b0c3ad7
             
             {/* 1. Hero Block — top-left global expansion map visual */}
             <div className="relative w-full h-[85vh] min-h-[700px] flex items-center justify-center overflow-hidden bg-[#070608]">
