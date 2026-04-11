@@ -21,9 +21,14 @@ const TechnologySection = () => {
                             />
                         </div>
                         <div className="pointer-events-none absolute inset-0 bg-black/20" />
+<<<<<<< HEAD
                         {/* Hero Content — inset-0+max-w 동일 요소 사용 시 가로가 풀 너비로 잡혀 좌측 정렬처럼 보이므로, ABOUT 등과 같이 바깥 정렬 + 내부 max-w-4xl */}
                         <div className="absolute inset-0 z-10 flex items-center justify-center px-6 py-16 text-center sm:py-20">
                             <div className="flex w-full max-w-4xl flex-col items-center text-center">
+=======
+                        {/* Hero Content */}
+                        <div className="absolute inset-0 z-10 flex max-w-4xl flex-col items-center justify-center px-6 py-16 text-center sm:py-20">
+>>>>>>> 25d8a9cb2c91a56dfbc60efcee5a26d96b0c3ad7
                             <motion.p
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -51,7 +56,10 @@ const TechnologySection = () => {
                             >
                                 제품, 교육, 운영 시스템을 하나로 연결합니다.
                             </motion.p>
+<<<<<<< HEAD
                             </div>
+=======
+>>>>>>> 25d8a9cb2c91a56dfbc60efcee5a26d96b0c3ad7
                         </div>
                     </div>
                 </div>
@@ -82,6 +90,7 @@ const TechnologySection = () => {
                                 </p>
                             </div>
 
+<<<<<<< HEAD
                             <div className="flex flex-col gap-6">
                                 <Link
                                     to="/technology/development"
@@ -98,6 +107,14 @@ const TechnologySection = () => {
                                     기술 상세 보기 <span aria-hidden="true" className="font-light">→</span>
                                 </a>
                             </div>
+=======
+                            <Link
+                                to="/technology/development"
+                                className="overview-cta"
+                            >
+                                View Technology <span aria-hidden="true" className="font-light">→</span>
+                            </Link>
+>>>>>>> 25d8a9cb2c91a56dfbc60efcee5a26d96b0c3ad7
                         </motion.div>
 
                         {/* Right Side - 3 Columns */}

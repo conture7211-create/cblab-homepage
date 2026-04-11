@@ -22,6 +22,11 @@ export default function Hero() {
 
   const ctaPrimary =
     "inline-flex min-h-[58px] items-center justify-center border border-[#d8c1a0]/90 bg-[#d8c1a0] px-10 py-4 text-[16px] font-semibold tracking-[0.08em] text-[#111111] transition hover:bg-[#e5d4bc] hover:border-[#e5d4bc]";
+<<<<<<< HEAD
+=======
+  const ctaGhost =
+    "inline-flex min-h-[58px] items-center justify-center border border-white/40 bg-white/[0.06] px-10 py-4 text-[16px] font-semibold tracking-[0.08em] text-white/95 backdrop-blur-[2px] transition hover:border-[#d8c1a0]/55 hover:bg-white/10";
+>>>>>>> 25d8a9cb2c91a56dfbc60efcee5a26d96b0c3ad7
 
   return (
     <section
@@ -84,6 +89,7 @@ export default function Hero() {
           </p>
 
           <div className="flex max-w-xl flex-col gap-3.5 sm:flex-row sm:flex-wrap sm:gap-5">
+<<<<<<< HEAD
             <a
               href="https://smartstore.naver.com/longtimebeauty"
               target="_blank"
@@ -103,6 +109,17 @@ export default function Hero() {
             <Link to="/contact#kakao-inquiry" className={ctaPrimary}>
               Contact
             </Link>
+=======
+            <Link to="/brands/divaline" className={ctaPrimary}>
+              Official Store
+            </Link>
+            <Link to="/brands/long-time-liner" className={ctaGhost}>
+              Long-Time-Liner
+            </Link>
+            <a href="/#contact" className={ctaGhost}>
+              Contact
+            </a>
+>>>>>>> 25d8a9cb2c91a56dfbc60efcee5a26d96b0c3ad7
           </div>
         </div>
       </div>

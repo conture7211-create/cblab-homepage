@@ -60,7 +60,11 @@ const BrandsSection = () => {
             </div>
 
             {/* 2. Structured Section */}
+<<<<<<< HEAD
             <section id="product-ecosystem" className="section brands-section bg-[#fcfbf9] text-[#111111]">
+=======
+            <section id="brands" className="section brands-section bg-[#fcfbf9] text-[#111111]">
+>>>>>>> 25d8a9cb2c91a56dfbc60efcee5a26d96b0c3ad7
                 <div className="mx-auto max-w-[1560px] px-6 md:px-12 lg:px-20">
                     <div className="flex flex-col lg:flex-row lg:justify-between items-start gap-24 lg:gap-32">
 
@@ -84,6 +88,7 @@ const BrandsSection = () => {
                                 </p>
                             </div>
 
+<<<<<<< HEAD
                             <div className="flex flex-col gap-3">
                                 <Link
                                     to="/brands/divaline"
@@ -100,6 +105,14 @@ const BrandsSection = () => {
                                     LONG-TIME-LINER 공식 사이트 보기 <span aria-hidden="true" className="font-light">→</span>
                                 </a>
                             </div>
+=======
+                            <Link
+                                to="/brands/divaline"
+                                className="overview-cta"
+                            >
+                                View Brands <span aria-hidden="true" className="font-light">→</span>
+                            </Link>
+>>>>>>> 25d8a9cb2c91a56dfbc60efcee5a26d96b0c3ad7
                         </motion.div>
 
                         {/* Right Side - 3 Columns */}

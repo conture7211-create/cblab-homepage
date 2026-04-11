@@ -47,7 +47,11 @@ const BrandArchitecture = () => {
               <p className="font-sans text-[16px] md:text-[18px] text-soft-stone leading-[2] font-light break-keep max-w-md lg:max-w-lg mb-12">
                 기업 본체로서 미래 지향적 R&D, 시스템 구축, 그리고 글로벌 파트너십 전략을 총괄합니다. 프리미엄 뷰티 브랜드들이 가장 안전하고 체계적으로 성장할 수 있도록 돕는 코퍼레이트 인프라로서 기능합니다.
               </p>
+<<<<<<< HEAD
               <a href="/brands/brand-platform/partnership" className="inline-flex items-center font-inter text-[11px] md:text-[12px] tracking-[0.25em] text-elegant-white hover:text-muted-gold transition-colors font-light uppercase border-b border-elegant-white/30 pb-3">
+=======
+              <a href="#global" className="inline-flex items-center font-inter text-[11px] md:text-[12px] tracking-[0.25em] text-elegant-white hover:text-muted-gold transition-colors font-light uppercase border-b border-elegant-white/30 pb-3">
+>>>>>>> 25d8a9cb2c91a56dfbc60efcee5a26d96b0c3ad7
                 글로벌 전략 <ArrowRight size={16} className="ml-4" />
               </a>
             </div>

@@ -19,7 +19,11 @@ const highlights = [
     category: 'GLOBAL IMPACT',
     title: '전 세계로 확장되는 K-Beauty 테크놀로지 파이프라인',
     linkText: 'READ MORE',
+<<<<<<< HEAD
     href: '/brands/brand-platform/partnership',
+=======
+    href: '#global',
+>>>>>>> 25d8a9cb2c91a56dfbc60efcee5a26d96b0c3ad7
     img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop',
   }
 ];
