@@ -1,0 +1,5 @@
+src/App.tsx(6,24): error TS1261: Already included file name 'D:/1. Projects/cblab-homepage/src/components/PremiumPMU.tsx' differs from file name 'D:/1. Projects/cblab-homepage/src/components/PremiumPmu.tsx' only in casing.
+  The file is in the program because:
+    Imported via './components/PremiumPMU' from file 'D:/1. Projects/cblab-homepage/src/App.tsx'
+    Matched by include pattern 'src' in 'D:/1. Projects/cblab-homepage/tsconfig.app.json'
+src/components/BusinessAreas.tsx(68,27): error TS6133: 'index' is declared but its value is never read.
