@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 const heroSlides = [
   { id: "essence", video: "/videos/hero-main-01-serum.mp4" },
@@ -86,13 +85,31 @@ export default function Hero() {
           </p>
 
           <div className="flex max-w-xl flex-col gap-3.5 sm:flex-row sm:flex-wrap sm:gap-5">
-            <Link to="/brands/divaline" className={ctaPrimary}>
+            <a
+              href="https://smartstore.naver.com/longtimebeauty"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={ctaPrimary}
+            >
               Official Store
-            </Link>
-            <Link to="/brands/long-time-liner" className={ctaGhost}>
+            </a>
+
+            <a
+              href="https://long-time-liner.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={ctaGhost}
+            >
               Long-Time-Liner
-            </Link>
-            <a href="/#contact" className={ctaGhost}>
+            </a>
+            <a
+              href="#contact"
+              className={ctaGhost}
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
               Contact
             </a>
           </div>
