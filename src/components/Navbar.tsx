@@ -19,11 +19,6 @@ type NavItem = {
   body: string;
   image: string;
   linkText: string;
-<<<<<<< HEAD
-  /** 설정 시 메가메뉴 CTA는 내부 Link 대신 새 탭으로 여는 외부 링크 */
-  ctaExternalHref?: string;
-=======
->>>>>>> 808f286d6fd9148737391d8afd54c6076c71c70a
   columns?: SubMenuItem[];
 };
 
@@ -62,12 +57,7 @@ const navItems: NavItem[] = [
     overviewTitle: 'Overview',
     headline: '브랜드와 시스템으로\n아름다움을 설계합니다',
     body: 'C&B LAB은 브랜드, 기술, 교육, 서비스를\n하나의 구조 안에서 설계하는 프리미엄 뷰티 그룹입니다.',
-<<<<<<< HEAD
-    linkText: 'Explore C&B LAB →',
-    ctaExternalHref: 'http://www.cnb-lab.com',
-=======
     linkText: 'View Overview',
->>>>>>> 808f286d6fd9148737391d8afd54c6076c71c70a
     image: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2600&auto=format&fit=crop',
     columns: [
       {
@@ -421,28 +411,6 @@ const Navbar = () => {
                       </p>
                     </div>
                     
-<<<<<<< HEAD
-                    {activeMenu.ctaExternalHref ? (
-                      <a
-                        href={activeMenu.ctaExternalHref}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={() => setHoveredIndex(null)}
-                        className="overview-cta w-fit"
-                      >
-                        {activeMenu.linkText}
-                      </a>
-                    ) : (
-                      <Link
-                        to={activeMenu.href}
-                        onClick={() => setHoveredIndex(null)}
-                        className="overview-cta w-fit"
-                      >
-                        {activeMenu.linkText}{' '}
-                        <span aria-hidden="true" className="font-light">→</span>
-                      </Link>
-                    )}
-=======
                     <Link 
                       to={activeMenu.href} 
                       onClick={() => setHoveredIndex(null)}
@@ -450,7 +418,6 @@ const Navbar = () => {
                     >
                       {activeMenu.linkText} <span aria-hidden="true" className="font-light">→</span>
                     </Link>
->>>>>>> 808f286d6fd9148737391d8afd54c6076c71c70a
                   </div>
 
                   {/* Right: 3 Columns — flex로 분리해 그리드/오버플로우로 인한 동일 콘텐츠 착시 방지 */}
