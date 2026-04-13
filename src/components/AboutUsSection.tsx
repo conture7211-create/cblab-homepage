@@ -33,7 +33,11 @@ const aboutMegaColumns: { category: string; items: AboutColumnItem[] }[] = [
 
 const AboutUsSection = () => {
     return (
+<<<<<<< HEAD
         <div id="about" className="relative overflow-hidden bg-[#fcfbf9]">
+=======
+        <div className="relative overflow-hidden bg-[#fcfbf9]">
+>>>>>>> 808f286d6fd9148737391d8afd54c6076c71c70a
             
             {/* 1. Hero Block — 앵커는 아래 구조화 섹션(#about)에만 부여 */}
             <div className="relative w-full h-[85vh] min-h-[700px] flex items-center justify-center bg-black">
@@ -120,6 +124,7 @@ const AboutUsSection = () => {
                                 </p>
                             </div>
 
+<<<<<<< HEAD
                             <a
                                 href="http://www.cnb-lab.com"
                                 target="_blank"
@@ -128,6 +133,14 @@ const AboutUsSection = () => {
                             >
                                 Explore C&B LAB →
                             </a>
+=======
+                            <Link
+                                to="/about/our-story"
+                                className="overview-cta mt-8 lg:mt-10"
+                            >
+                                View Overview <span aria-hidden="true" className="font-light">→</span>
+                            </Link>
+>>>>>>> 808f286d6fd9148737391d8afd54c6076c71c70a
                         </motion.div>
 
                         <motion.div
