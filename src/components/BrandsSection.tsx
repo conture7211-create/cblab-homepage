@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const BrandsSection = () => {
     return (
-        <div className="relative overflow-hidden bg-[#fcfbf9]">
+        <div id="brands" className="relative scroll-mt-28 overflow-hidden bg-[#fcfbf9] lg:scroll-mt-32">
             
             {/* 1. Hero Block */}
             <div className="relative w-full h-[85vh] min-h-[700px] flex items-center justify-center bg-black">
@@ -60,7 +60,7 @@ const BrandsSection = () => {
             </div>
 
             {/* 2. Structured Section */}
-            <section id="brands" className="section brands-section bg-[#fcfbf9] text-[#111111]">
+            <section className="section brands-section bg-[#fcfbf9] text-[#111111]">
                 <div className="mx-auto max-w-[1560px] px-6 md:px-12 lg:px-20">
                     <div className="flex flex-col lg:flex-row lg:justify-between items-start gap-24 lg:gap-32">
 

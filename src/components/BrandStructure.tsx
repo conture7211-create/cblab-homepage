@@ -4,7 +4,7 @@ import { ArrowUpRight } from 'lucide-react';
 
 const BrandStructure = () => {
   return (
-    <section id="brands" className="py-32 bg-ivory relative">
+    <section id="brand-structure" className="py-32 bg-ivory relative">
       <div className="container mx-auto px-6 md:px-12">
         
         {/* Section Header */}

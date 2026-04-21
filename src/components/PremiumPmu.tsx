@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 
 const PremiumPmu = () => {
   return (
-    <section id="technology" className="py-32 lg:py-56 bg-deep-black text-elegant-white relative overflow-hidden">
+    <section id="premium-pmu-spotlight" className="py-32 lg:py-56 bg-deep-black text-elegant-white relative overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img 
           src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=2600&auto=format&fit=crop" 
@@ -28,7 +28,7 @@ const PremiumPmu = () => {
           <h2 className="font-serif text-[64px] md:text-[88px] lg:text-[110px] text-elegant-white leading-tight tracking-[0.05em] uppercase mb-12 text-center drop-shadow-2xl">
             LONG-TIME-LINER
           </h2>
-          <p className="font-sans text-[18px] lg:text-[20px] text-warm-taupe font-light tracking-[0.1em] leading-[2.2] mx-auto max-w-2xl mb-16 break-keep">
+          <p className="font-sans text-[18px] lg:text-[20px] text-warm-taupe font-light tracking-[0.1em] leading-[1.6] mx-auto max-w-2xl mb-16 break-keep">
             가장 진보된 장비, 타협하지 않는 피그먼트. <br className="hidden md:block"/>
             글로벌 PMU 스탠다드를 제시하는 독일 본사와의 전문적 파트너십.
           </p>
@@ -60,12 +60,12 @@ const PremiumPmu = () => {
             transition={{ duration: 1.5, delay: 0.2, ease: "easeOut" }}
             className="flex flex-col justify-center"
           >
-            <h3 className="font-serif text-[44px] md:text-[56px] lg:text-[64px] text-warm-ivory leading-[1.1] tracking-tight mb-12">
+            <h3 className="font-serif text-[26px] text-warm-ivory leading-[1.25] tracking-tight break-keep mb-12 sm:text-[34px] lg:text-[48px]">
               정확성과 안전성의 <br />
               <span className="italic">극단</span>을 추구합니다.
             </h3>
             
-            <p className="font-sans text-[16px] lg:text-[18px] text-soft-stone leading-[2.1] font-light max-w-[580px] break-keep mb-16 opacity-90">
+            <p className="font-sans text-[16px] lg:text-[18px] text-soft-stone leading-[1.6] font-light max-w-[580px] break-keep mb-16 opacity-90">
                반영구 화장(PMU)은 피부에 가장 직접적으로 닿는 기술이기에 타협 불가능한 수준의 정밀함과 인증이 필요합니다. C&B Lab은 세계적으로 가장 엄격한 독일의 테크놀로지, 무독성 피그먼트, 전용 핸드피스를 도입하여 마스터 클래스 교육을 운영합니다.
             </p>
 

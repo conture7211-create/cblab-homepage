@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const TechnologySection = () => {
     return (
-        <div className="relative overflow-hidden bg-[#fcfbf9]">
+        <div id="technology" className="relative scroll-mt-28 overflow-hidden bg-[#fcfbf9] lg:scroll-mt-32">
             
             {/* 1. Hero Block — 미디어 영역 */}
             <div className="technology-hero w-full bg-black">
@@ -21,42 +21,44 @@ const TechnologySection = () => {
                             />
                         </div>
                         <div className="pointer-events-none absolute inset-0 bg-black/20" />
-                        {/* Hero Content */}
-                        <div className="absolute inset-0 z-10 flex max-w-4xl flex-col items-center justify-center px-6 py-16 text-center sm:py-20">
-                            <motion.p
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8 }}
-                                viewport={{ once: true }}
-                                className="mb-8 font-inter text-[12px] uppercase tracking-[0.4em] text-[#d8c1a0]"
-                            >
-                                TECHNOLOGY
-                            </motion.p>
-                            <motion.h2
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, delay: 0.15 }}
-                                viewport={{ once: true }}
-                                className="section-hero-title mb-10"
-                            >
-                                브랜드의 지속 가능성을{'\n'}기술로 설계합니다
-                            </motion.h2>
-                            <motion.p
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, delay: 0.3 }}
-                                viewport={{ once: true }}
-                                className="font-sans text-[17px] md:text-[19px] text-white/80 font-light tracking-wide break-keep whitespace-pre-line"
-                            >
-                                제품, 교육, 운영 시스템을 하나로 연결합니다.
-                            </motion.p>
+                        {/* Hero Content — absolute + max-w만 주면 가로 중앙 정렬이 깨지므로, Business와 같이 전체 flex 중앙 + 내부 max-w */}
+                        <div className="absolute inset-0 z-10 flex items-center justify-center px-6 py-16 sm:py-20">
+                            <div className="flex w-full max-w-4xl flex-col items-center text-center">
+                                <motion.p
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.8 }}
+                                    viewport={{ once: true }}
+                                    className="mb-8 font-inter text-[12px] uppercase tracking-[0.4em] text-[#d8c1a0]"
+                                >
+                                    TECHNOLOGY
+                                </motion.p>
+                                <motion.h2
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.8, delay: 0.15 }}
+                                    viewport={{ once: true }}
+                                    className="section-hero-title mb-10"
+                                >
+                                    브랜드의 지속 가능성을{'\n'}기술로 설계합니다
+                                </motion.h2>
+                                <motion.p
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.8, delay: 0.3 }}
+                                    viewport={{ once: true }}
+                                    className="font-sans text-[17px] md:text-[19px] text-white/80 font-light tracking-wide break-keep whitespace-pre-line"
+                                >
+                                    제품, 교육, 운영 시스템을 하나로 연결합니다.
+                                </motion.p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             {/* 2. Structured Section — Brands와 동일 레이아웃·밀도 */}
-            <section id="technology" className="section technology-overview text-[#111111]">
+            <section className="section technology-overview text-[#111111]">
                 <div className="mx-auto max-w-[1560px] px-6 md:px-12 lg:px-20">
                     <div className="flex flex-col lg:flex-row lg:justify-between items-start gap-24 lg:gap-32">
 

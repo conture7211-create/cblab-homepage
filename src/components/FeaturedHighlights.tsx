@@ -55,7 +55,7 @@ const FeaturedHighlights = () => {
                   {item.category}
                 </span>
                 
-                <h3 className="font-serif text-[28px] lg:text-[34px] leading-[1.3] text-deep-black mb-10 break-keep">
+                <h3 className="font-serif text-[26px] leading-[1.25] text-deep-black mb-10 break-keep sm:text-[34px] lg:text-[48px]">
                   {item.title}
                 </h3>
 

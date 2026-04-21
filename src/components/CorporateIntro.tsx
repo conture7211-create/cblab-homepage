@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const CorporateIntro = () => {
   return (
-    <section id="about" className="py-32 lg:py-56 bg-warm-ivory relative overflow-hidden">
+    <section id="corporate-intro" className="py-32 lg:py-56 bg-warm-ivory relative overflow-hidden">
       <div className="container mx-auto px-8 md:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 lg:gap-32 items-center">
           
@@ -16,15 +16,15 @@ const CorporateIntro = () => {
             <h2 className="font-inter text-[11px] md:text-[13px] uppercase tracking-[0.4em] text-warm-taupe mb-10 border-l border-warm-taupe pl-5">
               Who We Are
             </h2>
-            <h3 className="font-serif text-[44px] lg:text-[60px] text-deep-black leading-[1.15] tracking-tight mb-12">
+            <h3 className="font-serif text-[26px] text-deep-black leading-[1.25] tracking-tight break-keep mb-12 sm:text-[34px] lg:text-[48px]">
               글로벌 수준의 <br/>
               <span className="italic font-light">신뢰</span>를 기반으로 한 <br/>
               프리미엄 뷰티 환경
             </h3>
-            <p className="font-sans text-[16px] lg:text-[18px] text-charcoal-light leading-[2.1] font-light mb-10 tracking-wide break-keep max-w-[90%]">
+            <p className="font-sans text-[16px] lg:text-[18px] text-charcoal-light leading-[1.6] font-light mb-10 tracking-wide break-keep max-w-[90%]">
               C&B Lab은 단순한 화장품 제조사나 일회성 뷰티 브랜드가 아닙니다. 우리는 하이엔드 뷰티 테크놀로지, 기능성 스킨케어 R&D, 전문가용 반영구 시스템(PMU), 그리고 글로벌 지향의 플랫폼 비즈니스를 통합하여 설계하는 철저한 코퍼레이트 그룹입니다.
             </p>
-            <p className="font-sans text-[15px] lg:text-[16px] text-warm-taupe leading-[2] font-light break-keep opacity-95 max-w-[90%]">
+            <p className="font-sans text-[15px] lg:text-[16px] text-warm-taupe leading-[1.6] font-light break-keep opacity-95 max-w-[90%]">
               미에 대한 요구가 높아질수록 그것을 뒷받침하는 시스템은 더욱 전문적이어야 합니다. 가장 안전하고 완벽한 인프라를 바탕으로, C&B Lab은 글로벌 프리미엄 뷰티 시장에서 굳건한 신뢰를 구축합니다.
             </p>
           </motion.div>

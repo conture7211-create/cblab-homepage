@@ -33,9 +33,9 @@ const aboutMegaColumns: { category: string; items: AboutColumnItem[] }[] = [
 
 const AboutUsSection = () => {
     return (
-        <div className="relative overflow-hidden bg-[#fcfbf9]">
+        <div id="about" className="relative scroll-mt-28 overflow-hidden bg-[#fcfbf9] lg:scroll-mt-32">
             
-            {/* 1. Hero Block — 앵커는 아래 구조화 섹션(#about)에만 부여 */}
+            {/* 1. Hero Block — 앵커(#about)는 섹션 최상위 래퍼에 부여 */}
             <div className="relative w-full h-[85vh] min-h-[700px] flex items-center justify-center bg-black">
                 <motion.div 
                     initial={{ scale: 1.05 }}
@@ -97,7 +97,7 @@ const AboutUsSection = () => {
             </div>
 
             {/* 2. Structured Section — 메가메뉴(ABOUT US)와 동일 구조: 좌 한글 / 우 영문 3컬럼 */}
-            <section id="about" className="section about-section text-[#111111] bg-[#fcfbf9]">
+            <section className="section about-section text-[#111111] bg-[#fcfbf9]">
                 <div className="mx-auto max-w-[1560px] px-6 md:px-12 lg:px-20">
                     <div className="flex flex-col lg:flex-row lg:justify-between items-stretch gap-16 lg:gap-0">
 
@@ -120,12 +120,15 @@ const AboutUsSection = () => {
                                 </p>
                             </div>
 
-                            <Link
-                                to="/about/our-story"
+                            <a
+                                href="https://cnb-lab.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="overview-cta mt-8 lg:mt-10"
                             >
-                                View Overview <span aria-hidden="true" className="font-light">→</span>
-                            </Link>
+                                Learn More About C&amp;B LAB{' '}
+                                <span aria-hidden="true" className="font-light">→</span>
+                            </a>
                         </motion.div>
 
                         <motion.div

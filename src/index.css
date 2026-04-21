@@ -20,8 +20,8 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    /* 고정 헤더(~152px)와 앵커 스크롤 정렬 */
-    scroll-padding-top: 152px;
+    /* 섹션별 scroll-margin-top으로 고정 헤더 보정 */
+    scroll-padding-top: 0;
   }
   body {
     /* 섹션 사이 틈에 검은 배경이 비치지 않도록 메인 톤과 통일 */
@@ -30,6 +30,7 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    word-break: keep-all;
   }
 }
 
@@ -52,28 +53,28 @@
     @apply mb-3 block font-sans text-[13px] md:text-[14px] font-semibold uppercase tracking-[0.12em] text-[#c9b494];
   }
   .overview-lead-title {
-    @apply mb-10 font-serif text-[27px] md:text-[34px] font-semibold leading-tight tracking-[0.02em] text-[#111111];
+    @apply mb-10 font-serif text-[26px] sm:text-[34px] lg:text-[48px] font-semibold leading-[1.25] tracking-[0.02em] text-[#111111] break-keep;
   }
   .overview-body-text {
-    @apply font-sans text-[15px] md:text-[16px] font-medium leading-[1.75] tracking-wide text-[#383838] break-keep;
+    @apply font-sans text-[15px] md:text-[16px] font-medium leading-[1.6] tracking-wide text-[#383838] break-keep;
   }
   .overview-cta {
     @apply inline-flex w-fit items-center gap-3 border-b border-[#111111]/40 pb-1 font-inter text-[15px] md:text-[16px] font-semibold tracking-[0.1em] text-[#111111] uppercase transition-opacity hover:opacity-70;
   }
 
-  /** 홈 섹션 히어로 메인 타이틀(h2) — 기존 대비 약 5% */
+  /** 홈 섹션 히어로 메인 타이틀(h2) */
   .section-hero-title {
-    @apply whitespace-pre-line font-serif leading-[1.25] tracking-[0.02em] text-white;
-    font-size: 44.1px;
+    @apply whitespace-pre-line font-serif leading-[1.25] tracking-[0.02em] text-white break-keep;
+    font-size: 26px;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 640px) {
     .section-hero-title {
-      font-size: 56.7px;
+      font-size: 34px;
     }
   }
   @media (min-width: 1024px) {
     .section-hero-title {
-      font-size: 67.2px;
+      font-size: 48px;
     }
   }
   .overview-col-title {
@@ -83,16 +84,15 @@
     @apply mb-4 border-b border-[#dddddd]/60 pb-2.5 font-serif text-[19px] md:text-[21px] font-semibold tracking-[0.02em] text-[#111111];
   }
   .overview-col-row {
-    @apply font-sans text-[15px] md:text-[16px] font-medium leading-relaxed tracking-wide text-[#383838] transition-colors hover:text-[#111111];
+    @apply font-sans text-[15px] md:text-[16px] font-medium leading-[1.6] tracking-wide text-[#383838] break-keep transition-colors hover:text-[#111111];
   }
 
   .hero h1 {
-    line-height: 1.2;
-    letter-spacing: -0.5px;
+    word-break: keep-all;
   }
 
   .hero p {
-    max-width: 420px;
+    word-break: keep-all;
   }
 
   /** 홈 ABOUT / BUSINESS 등 흰색 overview 블록 — 세로 리듬 통일 */
@@ -101,18 +101,21 @@
   }
 
   .about-section p {
-    line-height: 1.5;
+    line-height: 1.6;
     max-width: 360px;
+    word-break: keep-all;
   }
 
   .business-section p {
     max-width: 360px;
-    line-height: 1.5;
+    line-height: 1.6;
+    word-break: keep-all;
   }
 
   .brands-section p {
     max-width: 360px;
-    line-height: 1.5;
+    line-height: 1.6;
+    word-break: keep-all;
   }
 
   /** TECHNOLOGY 히어로 — 미디어 영역 안정화 (transform/vh 이슈 방지) */
@@ -143,12 +146,14 @@
 
   .technology-overview p {
     max-width: 360px;
-    line-height: 1.5;
+    line-height: 1.6;
+    word-break: keep-all;
   }
 
   .education-section p {
     max-width: 360px;
-    line-height: 1.5;
+    line-height: 1.6;
+    word-break: keep-all;
   }
 }
 
@@ -193,8 +198,9 @@
 .brands-section .section-left p,
 .technology-overview .section-left p,
 .education-section .section-left p {
-  line-height: 1.55 !important;
+  line-height: 1.6 !important;
   margin-bottom: 22px !important;
+  word-break: keep-all;
 }
 
 .about-section h2,
@@ -202,9 +208,30 @@
 .brands-section h2,
 .technology-overview h2,
 .education-section h2 {
-  font-size: 46px !important;
-  line-height: 1.05 !important;
+  font-size: 26px !important;
+  line-height: 1.25 !important;
   margin-bottom: 18px !important;
+  word-break: keep-all;
+}
+
+@media (min-width: 640px) {
+  .about-section h2,
+  .business-section h2,
+  .brands-section h2,
+  .technology-overview h2,
+  .education-section h2 {
+    font-size: 34px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-section h2,
+  .business-section h2,
+  .brands-section h2,
+  .technology-overview h2,
+  .education-section h2 {
+    font-size: 48px !important;
+  }
 }
 
 .about-section .section-kicker,

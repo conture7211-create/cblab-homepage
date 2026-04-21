@@ -101,7 +101,7 @@ const BrandShowcaseSection = () => {
                                                 <p className="mb-6 font-inter text-[11px] uppercase tracking-[0.38em] text-white/72">
                                                     {item.eyebrow}
                                                 </p>
-                                                <h2 className="font-serif text-[34px] leading-[1.14] tracking-[-0.02em] text-white md:text-[52px] lg:text-[68px]">
+                                                <h2 className="font-serif text-[26px] leading-[1.25] tracking-[-0.02em] text-white break-keep sm:text-[34px] lg:text-[48px]">
                                                     {item.title}
                                                 </h2>
                                             </div>
@@ -119,7 +119,7 @@ const BrandShowcaseSection = () => {
                                                 {item.eyebrow}
                                             </p>
 
-                                            <h3 className="font-serif text-[34px] leading-[1.18] tracking-[-0.02em] text-[#111111] md:text-[52px] lg:text-[64px]">
+                                            <h3 className="font-serif text-[26px] leading-[1.25] tracking-[-0.02em] text-[#111111] break-keep sm:text-[34px] lg:text-[48px]">
                                                 <span className="block">{item.messageLine1}</span>
                                                 <span className="block whitespace-nowrap">
                                                     {item.messageLine2}
@@ -130,12 +130,12 @@ const BrandShowcaseSection = () => {
 
                                     <div className="lg:col-span-5">
                                         <div className="max-w-[520px] lg:ml-auto">
-                                            <p className="font-sans text-[16px] leading-[1.95] text-[#4a443d] md:text-[18px]">
+                                            <p className="font-sans text-[16px] leading-[1.6] text-[#4a443d] break-keep md:text-[18px]">
                                                 {item.description}
                                             </p>
 
                                             {item.subDescription ? (
-                                                <p className="mt-8 font-sans text-[14px] leading-[1.95] text-[#8a8177] md:text-[15px]">
+                                                <p className="mt-8 font-sans text-[14px] leading-[1.6] text-[#8a8177] break-keep md:text-[15px]">
                                                     {item.subDescription}
                                                 </p>
                                             ) : null}

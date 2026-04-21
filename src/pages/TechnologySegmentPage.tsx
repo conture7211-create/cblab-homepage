@@ -74,7 +74,7 @@ export default function TechnologySegmentPage() {
   const data = segment ? SEGMENTS[segment] : undefined;
 
   if (!data) {
-    return <Navigate to="/#technology" replace />;
+    return <Navigate to={{ pathname: '/', hash: '#technology' }} replace />;
   }
 
   return (

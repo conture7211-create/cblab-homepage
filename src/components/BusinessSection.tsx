@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const BusinessSection = () => {
     return (
-        <div className="relative overflow-hidden bg-[#ffffff]">
+        <div id="business" className="relative scroll-mt-28 overflow-hidden bg-[#ffffff] lg:scroll-mt-32">
             
             {/* 1. Hero Block */}
             <div className="relative w-full h-[85vh] min-h-[700px] flex items-center justify-center bg-black">
@@ -60,7 +60,7 @@ const BusinessSection = () => {
             </div>
 
             {/* 2. Business Overview (ABOUT US structured section 패턴 동일) */}
-            <section id="business" className="section business-section text-[#111111] bg-[#fcfbf9]">
+            <section className="section business-section text-[#111111] bg-[#fcfbf9]">
                 <div className="container mx-auto max-w-[1560px] px-6 md:px-12 lg:px-20">
                     <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-16 lg:gap-10">
                         <motion.div

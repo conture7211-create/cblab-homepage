@@ -4,7 +4,7 @@ import { ArrowUpRight } from 'lucide-react';
 
 const FinalCTA = () => {
   return (
-    <section id="contact" className="py-0 relative overflow-hidden bg-charcoal-dark">
+    <section className="py-0 relative overflow-hidden bg-charcoal-dark">
       <div className="grid grid-cols-1 lg:grid-cols-2">
         
         {/* Partnership / B2B Section */}

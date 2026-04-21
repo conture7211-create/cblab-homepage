@@ -1,4 +1,5 @@
-import { Routes, Route, Outlet } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Routes, Route, Outlet, useLocation } from 'react-router-dom';
 import TechnologySection from './components/TechnologySection';
 import BrandsSection from './components/BrandsSection';
 import AboutUsSection from './components/AboutUsSection';
@@ -6,7 +7,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import BusinessSection from './components/BusinessSection';
 import EducationSection from './components/EducationSection';
-import FinalContact from './components/FinalContact';
+import FinalContact from "./components/FinalContact";
 import OurStory from './pages/OurStory';
 import AboutResearchDevelopment from './pages/AboutResearchDevelopment';
 import DivalinePage from './pages/DivalinePage';
@@ -37,6 +38,20 @@ function RootLayout() {
 }
 
 function HomePage() {
+  const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    if (pathname !== '/' || !hash) return;
+    const id = hash.replace(/^#/, '');
+    if (!id) return;
+    const run = () => {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+    requestAnimationFrame(() => {
+      requestAnimationFrame(run);
+    });
+  }, [pathname, hash]);
+
   return (
     <>
       <Hero />

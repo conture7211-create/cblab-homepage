@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 type MenuEntry = string | { label: string; to: string };
@@ -53,7 +53,7 @@ const BUSINESS_MEGA_EXPERIENCE: SubMenuItem = {
 const navItems: NavItem[] = [
   {
     label: 'ABOUT',
-    href: '/#about',
+    href: '#about',
     overviewTitle: 'Overview',
     headline: '브랜드와 시스템으로\n아름다움을 설계합니다',
     body: 'C&B LAB은 브랜드, 기술, 교육, 서비스를\n하나의 구조 안에서 설계하는 프리미엄 뷰티 그룹입니다.',
@@ -88,7 +88,7 @@ const navItems: NavItem[] = [
   },
   {
     label: 'BUSINESS',
-    href: '/#business',
+    href: '#business',
     overviewTitle: 'OVERVIEW',
     headline: 'Integrated Beauty Platform',
     body: '제품, 교육, 서비스를\n하나의 흐름으로 연결합니다.',
@@ -98,7 +98,7 @@ const navItems: NavItem[] = [
   },
   {
     label: 'BRANDS',
-    href: '/#brands',
+    href: '#brands',
     overviewTitle: 'OVERVIEW',
     headline: '각기 다른 역할로\n연결된 브랜드 포트폴리오',
     body: '각 브랜드는 서로 다른 역할로\n하나의 플랫폼 안에서 연결됩니다.',
@@ -136,7 +136,7 @@ const navItems: NavItem[] = [
   },
   {
     label: 'TECHNOLOGY',
-    href: '/#technology',
+    href: '#technology',
     overviewTitle: 'OVERVIEW',
     headline: '브랜드의 지속 가능성을\n기술로 설계합니다',
     body: 'C&B LAB은 디바이스 설계, 소재 개발,\n교육 시스템을 하나의 구조로 연결합니다.',
@@ -171,7 +171,7 @@ const navItems: NavItem[] = [
   },
   {
     label: 'EDUCATION',
-    href: '/#education',
+    href: '#education',
     overviewTitle: 'OVERVIEW',
     headline: '전문가 역량을\n시스템으로 전달합니다',
     body: '입문부터 전문가까지\n이어지는 교육 구조',
@@ -283,6 +283,22 @@ function MegaMenuColumn({
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const goToHomeSection = (hashHref: string) => {
+    const id = hashHref.replace(/^#/, '');
+    setHoveredIndex(null);
+    if (location.pathname !== '/') {
+      navigate({ pathname: '/', hash: `#${id}` });
+      return;
+    }
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      window.history.replaceState(null, '', `#${id}`);
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -344,29 +360,19 @@ const Navbar = () => {
                   const navLinkClass = `whitespace-nowrap font-serif text-[14px] lg:text-[15px] xl:text-[16px] font-semibold tracking-[0.06em] transition-colors duration-300 h-full flex items-center ${
                     hoveredIndex === idx ? 'text-[#d8c1a0]' : 'text-white hover:text-[#d8c1a0]'
                   }`;
-                  if (item.label === 'EDUCATION') {
-                    return (
-                      <a
-                        key={item.label}
-                        href="/#education"
-                        onMouseEnter={() => setHoveredIndex(idx)}
-                        onClick={() => setHoveredIndex(null)}
-                        className={navLinkClass}
-                      >
-                        EDUCATION
-                      </a>
-                    );
-                  }
                   return (
-                    <Link
+                    <a
                       key={item.label}
-                      to={item.href}
+                      href={item.href}
                       onMouseEnter={() => setHoveredIndex(idx)}
-                      onClick={() => setHoveredIndex(null)}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        goToHomeSection(item.href);
+                      }}
                       className={navLinkClass}
                     >
                       {item.label}
-                    </Link>
+                    </a>
                   );
                 })}
               </nav>
@@ -376,7 +382,11 @@ const Navbar = () => {
             <div className="hidden md:flex items-center justify-end min-w-[168px]">
               <a
                 href="#contact"
-                onClick={() => setHoveredIndex(null)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setHoveredIndex(null);
+                  document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                }}
                 className="flex items-center justify-center min-w-[162px] h-[52px] px-8 border border-white/55 text-white text-[14px] tracking-[0.14em] font-inter font-semibold hover:bg-white/[0.12] hover:border-[#d8c1a0]/65 transition-all duration-300"
               >
                 CONTACT
@@ -411,13 +421,16 @@ const Navbar = () => {
                       </p>
                     </div>
                     
-                    <Link 
-                      to={activeMenu.href} 
-                      onClick={() => setHoveredIndex(null)}
+                    <a
+                      href={activeMenu.href}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        goToHomeSection(activeMenu.href);
+                      }}
                       className="overview-cta w-fit"
                     >
                       {activeMenu.linkText} <span aria-hidden="true" className="font-light">→</span>
-                    </Link>
+                    </a>
                   </div>
 
                   {/* Right: 3 Columns — flex로 분리해 그리드/오버플로우로 인한 동일 콘텐츠 착시 방지 */}

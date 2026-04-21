@@ -71,7 +71,7 @@ export default function EducationSegmentPage() {
   const data = segment ? SEGMENTS[segment] : undefined;
 
   if (!data) {
-    return <Navigate to="/#education" replace />;
+    return <Navigate to={{ pathname: '/', hash: '#education' }} replace />;
   }
 
   return (

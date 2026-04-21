@@ -40,7 +40,7 @@ const areas = [
 
 const BusinessAreas = () => {
   return (
-    <section id="business" className="py-0 bg-warm-ivory text-deep-black">
+    <section id="business-areas-editorial" className="py-0 bg-warm-ivory text-deep-black">
       {/* Massive Editorial Header */}
       <div className="container mx-auto px-8 md:px-16 pt-48 pb-20">
         <motion.p 
@@ -56,7 +56,7 @@ const BusinessAreas = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1.2 }}
-          className="font-serif text-[56px] lg:text-[76px] tracking-tight leading-[1.1] mb-8"
+          className="font-serif text-[26px] tracking-tight leading-[1.25] break-keep mb-8 sm:text-[34px] lg:text-[48px]"
         >
           아름다움을 <br />
           물리적 시스템으로 설계합니다
@@ -90,13 +90,13 @@ const BusinessAreas = () => {
                 <span className="font-inter text-muted-gold text-[20px] lg:text-[24px] font-light tracking-[0.3em] block mb-6">
                   {area.id}
                 </span>
-                <h3 className="font-serif text-[40px] md:text-[56px] lg:text-[68px] text-elegant-white mb-8 tracking-tight leading-[1.05]">
+                <h3 className="font-serif text-[26px] text-elegant-white mb-8 tracking-tight leading-[1.25] break-keep sm:text-[34px] lg:text-[48px]">
                   {area.title}
                 </h3>
                 <h4 className="font-inter text-[13px] md:text-[14px] tracking-[0.2em] text-warm-ivory uppercase mb-10 opacity-90">
                   {area.korTitle}
                 </h4>
-                <p className="font-sans text-soft-stone text-[16px] lg:text-[18px] leading-[2] font-light max-w-xl break-keep opacity-0 -translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-[1s] delay-100">
+                <p className="font-sans text-soft-stone text-[16px] lg:text-[18px] leading-[1.6] font-light max-w-xl break-keep opacity-0 -translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-[1s] delay-100">
                   {area.desc}
                 </p>
               </div>

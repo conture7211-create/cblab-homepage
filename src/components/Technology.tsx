@@ -10,7 +10,7 @@ const Technology = () => {
   ];
 
   return (
-    <section id="technology" className="py-24 bg-charcoal-dark text-warm-white relative overflow-hidden">
+    <section id="technology-legacy-block" className="py-24 bg-charcoal-dark text-warm-white relative overflow-hidden">
       {/* Background Accent */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-charcoal hidden lg:block opacity-50 transform skew-x-12 translate-x-32 z-0"></div>
 

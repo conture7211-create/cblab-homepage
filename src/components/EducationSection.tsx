@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const EducationSection = () => {
     return (
-        <div className="relative overflow-hidden bg-[#fcfbf9]">
+        <div id="education" className="relative scroll-mt-28 overflow-hidden bg-[#fcfbf9] lg:scroll-mt-32">
             <div className="relative flex min-h-[700px] h-[85vh] w-full items-center justify-center bg-black">
                 <motion.div
                     initial={{ scale: 1.05 }}
@@ -54,7 +54,7 @@ const EducationSection = () => {
                 </div>
             </div>
 
-            <section id="education" className="section education-section bg-[#fcfbf9] text-[#111111]">
+            <section className="section education-section bg-[#fcfbf9] text-[#111111]">
                 <div className="mx-auto max-w-[1560px] px-6 md:px-12 lg:px-20">
                     <div className="flex flex-col lg:flex-row lg:justify-between items-stretch gap-16 lg:gap-0">
                         <motion.div
