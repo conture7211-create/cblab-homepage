@@ -27,7 +27,10 @@ export default function FinalContact() {
               </p>
             </div>
 
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+            <div
+              className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap"
+              style={{ position: 'relative', zIndex: 10 }}
+            >
               <a
                 href="http://pf.kakao.com/_bPFyxj/chat"
                 target="_blank"
@@ -39,7 +42,8 @@ export default function FinalContact() {
 
               <a
                 href="mailto:info@cnb-lab.com"
-                className="inline-flex min-h-[54px] items-center justify-center border border-white/30 px-8 text-[13px] font-semibold tracking-[0.08em] text-white transition hover:border-white hover:bg-white/5"
+                className="contact-btn"
+                style={{ position: 'relative', zIndex: 10 }}
               >
                 Contact / Partnership
               </a>
